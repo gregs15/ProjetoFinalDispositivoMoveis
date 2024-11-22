@@ -1,5 +1,7 @@
 package com.example.dispositivomovel.model;
 
+import android.os.Parcelable;
+
 public class Dish {
     private int id;
     private String name;
