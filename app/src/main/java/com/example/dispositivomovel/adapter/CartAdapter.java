@@ -19,7 +19,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     private List<Dish> orderedDishes;
     private List<Drink> orderedDrinks;
 
-    // Construtor que recebe os itens do carrinho
+
     public CartAdapter(List<Dish> orderedDishes, List<Drink> orderedDrinks) {
         this.orderedDishes = orderedDishes;
         this.orderedDrinks = orderedDrinks;
@@ -35,7 +35,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
-        // Verifica se o item é um prato ou uma bebida
+
         if (position < orderedDishes.size()) {
             Dish dish = orderedDishes.get(position);
             holder.nameTextView.setText(dish.getName());
@@ -58,7 +58,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
         public CartViewHolder(View itemView) {
             super(itemView);
-            // Inicializa as views do item do carrinho
+
             nameTextView = itemView.findViewById(R.id.cart_item_name);
             priceTextView = itemView.findViewById(R.id.cart_item_price);
         }

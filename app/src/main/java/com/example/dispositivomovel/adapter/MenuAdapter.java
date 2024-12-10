@@ -62,7 +62,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
             holder.price.setText(String.format("R$ %.2f", drink.getPrice()));
         }
 
-        // Adiciona o item ao carrinho quando o botão for clicado
+
         holder.addToCartButton.setOnClickListener(v -> listener.onAddToCartClick(item));
     }
 
