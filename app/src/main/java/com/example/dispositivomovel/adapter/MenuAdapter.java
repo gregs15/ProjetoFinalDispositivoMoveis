@@ -1,5 +1,6 @@
 package com.example.dispositivomovel.adapter;
 
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,17 +15,25 @@ import com.example.dispositivomovel.model.Dish;
 import com.example.dispositivomovel.model.Drink;
 
 import java.util.List;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.List;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder> {
 
-    private final List<Object> menuItems;
+    private final List<Parcelable> menuItems;
     private final OnItemClickListener listener;
 
     public interface OnItemClickListener {
-        void onAddToCartClick(Object item);
+        void onAddToCartClick(Parcelable item);
     }
 
-    public MenuAdapter(List<Object> menuItems, OnItemClickListener listener) {
+    public MenuAdapter(List<Parcelable> menuItems, OnItemClickListener listener) {
         this.menuItems = menuItems;
         this.listener = listener;
     }
@@ -39,7 +48,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull MenuViewHolder holder, int position) {
-        Object item = menuItems.get(position);
+        Parcelable item = menuItems.get(position);
 
         if (item instanceof Dish) {
             Dish dish = (Dish) item;
@@ -71,7 +80,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
             name = itemView.findViewById(R.id.item_name);
             description = itemView.findViewById(R.id.item_description);
             price = itemView.findViewById(R.id.item_price);
-            addToCartButton = itemView.findViewById(R.id.add_to_cart_button);
+            addToCartButton = itemView.findViewById(R.id.cart_button);
         }
     }
 }
