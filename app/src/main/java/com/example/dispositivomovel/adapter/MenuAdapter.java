@@ -23,7 +23,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
-
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder> {
 
     private final List<Parcelable> menuItems;
@@ -62,7 +61,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
             holder.price.setText(String.format("R$ %.2f", drink.getPrice()));
         }
 
-
         holder.addToCartButton.setOnClickListener(v -> listener.onAddToCartClick(item));
     }
 
@@ -80,7 +78,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
             name = itemView.findViewById(R.id.item_name);
             description = itemView.findViewById(R.id.item_description);
             price = itemView.findViewById(R.id.item_price);
-            addToCartButton = itemView.findViewById(R.id.cart_button);
+            addToCartButton = itemView.findViewById(R.id.add_item_button);
         }
     }
 }

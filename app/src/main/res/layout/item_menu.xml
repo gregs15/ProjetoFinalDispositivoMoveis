@@ -1,40 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- item_menu.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
+    <EditText
         android:id="@+id/item_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome do Item"
+        android:hint="Nome do Item"
         android:textSize="18sp" />
 
-    <TextView
+    <EditText
         android:id="@+id/item_description"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descrição do Item"
+        android:hint="Descrição do Item"
         android:textSize="14sp"
         android:layout_marginTop="4dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/item_price"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Preço"
+        android:hint="Preço"
         android:textSize="16sp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/select_item_button"
+        android:id="@+id/add_item_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Adicionar ao Carrinho"
+        android:text="Adicionar ao Menu"
         android:layout_marginTop="12dp" />
-
 </LinearLayout>
-
